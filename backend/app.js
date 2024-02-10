@@ -54,7 +54,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 * */
 
 app.use(cors(
-
+{
+      origin : ["https://deploying-express-api.vercel.app"],
+      method : ["POST","GET","PUT","PATCH"],
+      credentials : true
+    }
 ));
 
 mongoose.connect(db,{
