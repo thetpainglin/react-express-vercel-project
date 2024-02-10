@@ -33,6 +33,14 @@ let bannerRouter = require('./Ecomerce_Project/route/bannerRouter');
 
 var app = express();
 
+app.use(cors(
+{
+      origin: ["https://deploying-express-api.vercel.app/api/products/","https://deploying-express-api.vercel.app/api/banner/"],
+      methods: ["POST","GET","PUT","PATCH","DELETE"],
+      credentials: true
+    }
+));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -53,13 +61,7 @@ app.use(express.static(path.join(__dirname, 'public')));
     }
 * */
 
-app.use(cors(
-{
-      origin: ["https://deploying-express-api.vercel.app/api/products/","https://deploying-express-api.vercel.app/api/banner/"],
-      methods: ["POST","GET","PUT","PATCH","DELETE"],
-      credentials: true
-    }
-));
+
 
 mongoose.connect(db,{
   useNewUrlParser : true,
