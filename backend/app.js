@@ -55,7 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors(
 {
-      origin : ["https://deploying-express-api.vercel.app/api/*"],
+      origin : ["https://deploying-express-api.vercel.app/api/products","https://deploying-express-api.vercel.app/api/banner"],
       method : ["POST","GET","PUT","PATCH"],
       credentials : true
     }
