@@ -32,17 +32,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*
-*
-* {
-      origin : [],
-      method : ["POST","GET","PUT","PATCH"],
-      credentials : true
-    }
-* */
-
-
-
 mongoose.connect(db,{
   useNewUrlParser : true,
   useUnifiedTopology : true,
