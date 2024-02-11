@@ -48,13 +48,7 @@ mongoose.connect(db,{
   useUnifiedTopology : true,
 }).then(()=>console.log("Mongodb connected!")).catch(err => console.log(err));
 
-app.use(cors(
-     {
-          origin: ["https://react-frontend-api.vercel.app"],
-          methods: ["GET","POST","DELETE"],
-          credentials: true
-    }
-));
+app.use(cors());
 
 app.use('/', indexRouter);
 
