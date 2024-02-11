@@ -41,23 +41,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 
-{/* for kae Daung Project
 
-//auth.verifyUserToken, in /api/movies/
-
-  app.use('/api/users', usersRouter);
-  app.use('/api/kaeDaung/footballClub', FootballRouter);
-  app.use('/api/kaeDaung/manager', contactManagerRouter);
-  app.use('/api/kaeDaung/playerReview', auth.verifyUserToken, PlayerReviewRouter);
-   */
-}
-
-{/*
-  for ecommerce project
-
-  app.use('/api/products', productRouter);
-  app.use('/api/banner', bannerRouter);
-*/}
 app.use('/api/products', productRouter);
 app.use('/api/banner', bannerRouter);
 
