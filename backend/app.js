@@ -11,21 +11,7 @@ const {db} = require('./config/database');
 let auth = require('./middleWare/auth');
 let indexRouter = require('./routes/index');
 
-{/*for kae Daung Project
 
-  let usersRouter = require('./routes/users');
-  let FootballRouter = require('./routes/footballClub');
-  let contactManagerRouter = require('./routes/contactManagerRoute');
-  let PlayerReviewRouter = require('./routes/playerReview');
-  */
-}
-{/*
-  for ecommerce project
-
-  let productRouter = require('./Ecomerce_Project/route/productRouter');
-  let bannerRouter = require('./Ecomerce_Project/route/bannerRouter');
-  */
-}
 let productRouter = require('./Ecomerce_Project/route/productRouter');
 let bannerRouter = require('./Ecomerce_Project/route/bannerRouter');
 
@@ -34,10 +20,13 @@ let bannerRouter = require('./Ecomerce_Project/route/bannerRouter');
 var app = express();
 
 app.use(cors(
-{
-      origin: ["https://react-frontend-api.vercel.app/"],
-      methods: ["POST","GET","PUT","PATCH","DELETE"],
-      credentials: true
+
+     {
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  
       
     }
 ));
