@@ -1,6 +1,8 @@
 import {API_URL} from "./API";
 const axios = require('axios');
 axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
 let store;
 
 export const injectStore = (st)=>{
