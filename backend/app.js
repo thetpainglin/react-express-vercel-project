@@ -35,7 +35,9 @@ var app = express();
 
 app.use(cors(
 {
-      origin: "*"
+      origin: ["https://deploying-express-api.vercel.app/api/banner/","https://deploying-express-api.vercel.app/api/products/"],
+      methods: ["POST","GET"],
+      credentials: true
       
     }
 ));
