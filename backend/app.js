@@ -51,11 +51,9 @@ mongoose.connect(db,{
 app.use(cors(
 
      {
-    origin: 'https://react-frontend-api.vercel.app',
-    methods: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  
+    origin: "https://react-frontend-api.vercel.app",
+    methods: "*",
+    credentials: true
       
     }
 ));
