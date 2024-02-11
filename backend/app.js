@@ -49,12 +49,10 @@ mongoose.connect(db,{
 }).then(()=>console.log("Mongodb connected!")).catch(err => console.log(err));
 
 app.use(cors(
-
      {
     origin: "https://react-frontend-api.vercel.app",
     methods: "*",
     credentials: true
-      
     }
 ));
 
