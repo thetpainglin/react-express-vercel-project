@@ -22,7 +22,7 @@ var app = express();
 app.use(cors(
 
      {
-    origin: '*',
+    origin: 'https://react-frontend-api.vercel.app',
     methods: '*',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
