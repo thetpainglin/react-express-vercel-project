@@ -19,7 +19,13 @@ let bannerRouter = require('./Ecomerce_Project/route/bannerRouter');
 
 var app = express();
 
-
+app.use(cors(
+        {
+          origin: 'https://react-frontend-api.vercel.app',
+          methods: ["POST","GET"],
+          credentials: true
+        }
+));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,10 +43,8 @@ mongoose.connect(db,{
   useUnifiedTopology : true,
 }).then(()=>console.log("Mongodb connected!")).catch(err => console.log(err));
 
-app.use(cors());
 
 app.use('/', indexRouter);
-
 
 app.use('/api/products', productRouter);
 app.use('/api/banner', bannerRouter);
